@@ -44,15 +44,18 @@ public class stepDefinition {
     	System.out.println("Logged in successfully with " + username + " and " + password);
     }
 
+    
     @Then("^Home page is populated$")
     public void home_page_is_populated() throws Throwable {
     	System.out.println("Validated home page");
     }
+    
 
     @And("^Cards displayed are \"([^\"]*)\"$")
     public void cards_displayed_are_something(String value) throws Throwable {
     	System.out.println("Cards displayed " + value);
     }
+    
     
     @When("^User sign up with following details$")
     public void user_sign_up_with_following_details(DataTable data) throws Throwable {
@@ -61,6 +64,7 @@ public class stepDefinition {
     	String password = obj.get(0).get(1);
     	System.out.println("User sign up with following details...[" + name + " - " + password + "]");
     }
+    
     
     @When("^User login into application using examples with username (.+) and password (.+)$")
     public void user_login_into_application_using_examples_with_username_and_password(String username, String password) throws Throwable {

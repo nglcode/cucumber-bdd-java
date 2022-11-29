@@ -2,26 +2,26 @@
 Feature: Application Login
   I want to use this template for my feature file
   
-  Background:
-	Given validate the browser
-	When browser is triggered
-	Then check if browser is started
+  #Background:
+#	Given validate the browser
+#	When browser is triggered
+#	Then check if browser is started
 
-  @RegTest @SmokeTest
+  @WebTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
     When User login into application with username "jin" and password "1234"
     Then Home page is populated
     And Cards displayed are "true"
     
-  @SmokeTest
+  @MobileTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
-    When User login into application with username "john" and password "4321"
+    When User login into application with username "john-mobile" and password "4321"
     Then Home page is populated
     And Cards displayed are "false"
     
-  @SmokeTest
+  @MobileTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
     When User sign up with following details
